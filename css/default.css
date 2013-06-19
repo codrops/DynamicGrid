@@ -1,0 +1,90 @@
+/* General Demo Style */
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:300,700);
+@font-face {
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0; height: 100%; }
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	font-family: 'Merriweather Sans', sans-serif;
+	color: #fff;
+	background: #333;
+}
+
+a {
+	color: #000;
+	color: rgba(0,0,0,0.5);
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	color: #fff;
+}
+
+.container {
+	height: 100%;
+}
+
+/* To Navigation Style */
+.codrops-top {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 0.69em;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.codrops-top a {
+	letter-spacing: 1px;
+	display: block;
+	padding: 0 1em 1em;
+}
+
+.codrops-icon:before {
+	font-family: 'codropsicons';
+	margin: 0 4px;
+	border: 2px solid rgba(0,0,0,0.5);
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	line-height: 17px;
+	text-align: center;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+}
+.codrops-icon:hover:before {
+	border-color: #fff;
+} 
+
+.codrops-icon-drop:before {
+	content: "\e001";
+}
+
+.codrops-icon-prev:before {
+	content: "\e004";
+}
+
+/* Demo Buttons Style */
+a.current-demo {
+	color: rgba(0,0,0,0.3);
+}
