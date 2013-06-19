@@ -49,18 +49,19 @@ var Grid = (function() {
 				height = 100 / rows;
 
 			if( current_row < rows && current_column < columns ) {
-				if( Modernizr.csscalc ) {
-					el.style.width = '-webkit-calc(' + width + '% + 1px)';
-					el.style.height = '-webkit-calc(' + height + '% + 1px)';
-					el.style.width = '-moz-calc(' + width + '% + 1px)';
-					el.style.height = '-moz-calc(' + height + '% + 1px)';
-					el.style.width = 'calc(' + width + '% + 1px)';
-					el.style.height = 'calc(' + height + '% + 1px)';
-				}
-				else  {
+				/* this seems to crash Safari 6 */
+				//if( Modernizr.csscalc ) {
+				//	el.style.width = '-webkit-calc(' + width + '% + 1px)';
+				//	el.style.height = '-webkit-calc(' + height + '% + 1px)';
+				//	el.style.width = '-moz-calc(' + width + '% + 1px)';
+				//	el.style.height = '-moz-calc(' + height + '% + 1px)';
+				//	el.style.width = 'calc(' + width + '% + 1px)';
+				//	el.style.height = 'calc(' + height + '% + 1px)';
+				//}
+				//else  {
 					el.style.width = width + .5 + '%';
 					el.style.height = height + .5 + '%';
-				}
+				//}
 				
 				el.style.left = width * ( current_column ) + '%';
 				el.style.top = height * ( current_row ) + '%';
